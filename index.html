@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting Minutes</title>
+    <!--link to external style sheet-->
+    <link rel ="stylesheet" href="style.css">
+    <!-- add google font 'Roboto'-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+<!-- <header> Semantic container for introductory content 
+    (not required but recommended). -->
+<header>
+    <h1>Meeting Minutes</h1>
+    <hr>
+    <h2>First Meeting</h2>
+    <h3>Date: April 15, 2025</h3>
+</header>
+
+<!-- id allows linking. modern browsers allow directly 
+    pasting emojis-->
+<section id = "attendance">
+    <h2>Attendees:</h2>
+    <ul>
+        <li> James Elroy 🖥️</li>
+        <li> Shasta Fay 🙋‍♀️</li>
+        <li> Diane Faine 🙋‍♀️</li>
+    </ul>
+</section>
+
+<section id='agenda'>
+    <h2>Agenda</h2>
+    <ol>
+        <li>Previous Business</li>
+        <li>New Business</li>
+    </ol>
+</section>
+
+<hr>
+<section id="media_items">
+    <h2>Media Items:</h2>
+
+    <h3>Random Image</h3>
+    <img src="image.jpg" alt="image failed to load" width="300">
+
+    <h3>Chill audio</h3>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <!--fallback message-->
+        Your browser does not support audio
+    </audio>
+
+    <h3>Video clip</h3>
+    <video controls width="300">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support video
+    </video>
+</section>
+
+<hr>
+<section id="form">
+    <h2>Tell us about yourself</h2>
+    <!-- begin form-->
+    <form>
+        <fieldset>
+            <legend>Please answer the following</legend>
+        <!-- text -->
+        <label for="name"><strong>Full Name:</strong></label>
+        <input type="text" id="name"><br><br>
+        
+
+        <!-- Radio buttons-->
+        <p><span style="font-style: italic;">Did you find the meeting helpful?</span></p>
+        <input type="radio" id="Yes" name="helpful" value="Yes">
+        <label for="Yes"><b>Yes 👍</b></label><br><br>
+        <input type="radio" id="No" name="helpful" value="No">
+        <label for="No"><i>No</i> 👎</label><br><br>
+
+        <!-- new text area -->
+        <label for="ideas">Share your <em>ideas</em> for the project warmup:</label><br>
+        <textarea id="ideas" name="ideas" rows="4" cols="60"></textarea>
+        <br><br>
+
+        <!-- Datalist to add attendees role-->
+        <label for="role"><strong>Your Role:</strong></label>
+        <input type="text" id="role" name="role" list="roles">
+        <!-- datalist must match input's list attribute -->
+        <datalist id="roles"> 
+            <!-- no need to close <option>. it is a void element when used
+                with datalist-->
+            <option value="Lead">
+            <option value="Customer">
+            <option value="Developer">
+            <option value="TA">
+        </datalist>
+        <p><strong>Select your college:</strong></p>
+
+        <select id="college" name="college">
+            <option value="">--Please choose--</option>
+            <option value="ERC">Eleanor Roosevelt</option>
+            <option value="Muir">John Muir</option>
+            <option value="Rev">Revelle</option>
+            <option value="Six">Sixth</option>
+        </select>
+        
+        </fieldset>
+    </form>
+</section>
+
+<section id="interactive">
+    <!-- details and summary are related elements-->
+    <!-- details adds a collapse expand-->
+    <div>
+        <details>
+            <!-- is the text displayed to collapse / expand-->
+            <summary><strong>Contacts</strong></summary>
+            <ul>
+                <li>Michael Collins : dvaneetv@ucsd.edu</li>
+                <li>Joe Soap : someone@jones.com</li>
+            </ul>
+        </details>
+    </div>
+</section>
+<!--nav button to top of page. # refers to top of page. added emphasis 
+    <a> is the anchor tag-->
+<nav>
+    <a href="#"><em>Return to the top</em></a>
+</nav>
+
+</body>
+</html>
