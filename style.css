@@ -1,0 +1,10 @@
+/* define css color variable.
+values can be changed later*/
+:root {
+    --bg-color: #f0f8ff;
+    --text-color: #222;
+    --accent-color: #4a90e2;
+    --border-color: #4a90e2;
+    --header-font: 'Roboto', sans-serif;
+  }
+  
