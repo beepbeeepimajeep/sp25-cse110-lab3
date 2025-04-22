@@ -9,7 +9,7 @@ values can be changed later*/
     /* color variables in RGB for attendees section */
     --attendance-bg: rgb(224, 247, 250);      /* very light cyan / soft aqua */
     --attendance-border: rgb(0, 172, 193);    /* bright teal / cyan blue */
-    --hover-color: rgb(0, 131, 143);          /* deep teal / muted cyan */
+    --hover-color: rgb(236, 64, 176);          /* deep teal / muted cyan */
 }
 
   /*style header using variables
@@ -56,6 +56,20 @@ header {
     padding: 2em;
     margin: 10px;
 }
+
+/* add hover effect for each attendee */
+#attendance li {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease;
+  }
+  
+  #attendance li:hover {
+    color: var(--hover-color);
+    cursor:auto;
+  }
+  
   
   
 

@@ -11,6 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.png" type="image/png">
+    <!--Internal CSS  -->
+   <style>
+    /* Internal CSS to style the nav link */
+    nav a {
+      font-size: 1.1rem;
+      <!-- use wider-gamut colo-->
+      color: color(display-p3 0.2 0.5 1); /* vibrant sky blue */
+    }
+
+    nav a:hover {
+      color: hsl(40, 83%, 31%); /* red on hover */
+    }
+  </style>
 </head>
 <body>
 <!-- <header> Semantic container for introductory content 
@@ -34,7 +47,8 @@
 </section>
 
 <section id='agenda'>
-    <h2>Agenda</h2>
+    <!-- added inline css using style attr.-->
+    <h2 style="color: orangered; text-decoration:wavy;">Agenda</h2>
     <ol>
         <li>Previous Business</li>
         <li>New Business</li>
