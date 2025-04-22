@@ -1,27 +1,33 @@
 /* define css color variable.
 values can be changed later*/
 :root {
-    --bg-color: #f0f8ff;
+    --bg-color: #8cecf1;
     --text-color: #222;
-    --accent-color: #4a90e2;
-    --border-color: #4a90e2;
+    --accent-color: #141a17;
+    --border-color: #883ec5;
     --header-font: 'Roboto', sans-serif;
-  }
+}
 
   /*style header using variables
     applies styling attributes to the <header> tag */
 
-  header {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--header-font);
-  text-align: center;
+header {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--header-font);
+    text-align: center;
 
-  margin: 1em 0 2em 0; /* shorthand */
-  padding: 1em 2em;
+    /* Shorthand for padding */
+    padding: 1em 2em;
+  
+    /* Longhand margin */
+    margin-top: 1em;
+    margin-right: 0;
+    margin-bottom: 2em;
+    margin-left: 0;
 
-  border: 2px solid var(--border-color);
-  border-radius: 10px;
+    border: 20px solid var(--border-color);
+    border-radius: 10px;
 }
 
   
