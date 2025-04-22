@@ -6,6 +6,10 @@ values can be changed later*/
     --accent-color: #141a17;
     --border-color: #883ec5;
     --header-font: 'Roboto', sans-serif;
+    /* color variables in RGB for attendees section */
+    --attendance-bg: rgb(224, 247, 250);      /* very light cyan / soft aqua */
+    --attendance-border: rgb(0, 172, 193);    /* bright teal / cyan blue */
+    --hover-color: rgb(0, 131, 143);          /* deep teal / muted cyan */
 }
 
   /*style header using variables
@@ -29,5 +33,30 @@ header {
     border: 20px solid var(--border-color);
     border-radius: 10px;
 }
+
+/* style the attendees section - which includes a list*/
+/* unlike <header> which is a html tag attendance is an element with 
+   an id. so we use #attendence*/
+#attendance {
+    background-color: var(--attendance-bg);
+    padding: 1em;
+    border: 2px solid var(--attendance-border);
+    border-radius: 8px;
+    margin-bottom: 2em;
+}
+
+/* flexbox the list within attendance */
+#attendance ul {
+    display: flex;
+    flex-direction:column;       /* default, but explicit */
+    justify-content: center;
+    gap: 2rem;
+  
+    list-style:circle;
+    padding: 2em;
+    margin: 10px;
+}
+  
+  
 
   
