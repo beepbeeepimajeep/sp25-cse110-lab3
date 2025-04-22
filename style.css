@@ -7,4 +7,21 @@ values can be changed later*/
     --border-color: #4a90e2;
     --header-font: 'Roboto', sans-serif;
   }
+
+  /*style header using variables
+    applies styling attributes to the <header> tag */
+
+  header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--header-font);
+  text-align: center;
+
+  margin: 1em 0 2em 0; /* shorthand */
+  padding: 1em 2em;
+
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+}
+
   
