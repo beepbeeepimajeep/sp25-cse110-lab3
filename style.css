@@ -44,6 +44,19 @@ header {
     border-radius: 8px;
     margin-bottom: 2em;
 }
+
+/* flexbox the list within attendance */
+#attendance ul {
+    display: flex;
+    flex-direction:column;       /* default, but explicit */
+    justify-content: center;
+    gap: 2rem;
+  
+    list-style:circle;
+    padding: 2em;
+    margin: 10px;
+}
+  
   
 
   
