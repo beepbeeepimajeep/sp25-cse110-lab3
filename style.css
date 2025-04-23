@@ -11,6 +11,22 @@ values can be changed later*/
     --attendance-border: rgb(0, 172, 193);    /* bright teal / cyan blue */
     --hover-color: rgb(236, 64, 176);          /* deep teal / muted cyan */
 }
+/* Universal (global reset). Sets default or base styles
+   Any more specific rule (like header {}, h1 {}, .class {}) will override it */
+*{
+    box-sizing: border-box;
+  }
+
+/* Highlight section styling using .class selector */
+.highlight {
+    background-color: var(--accent-color, #8c6f1f);
+    color: rgb(43, 152, 79);
+    padding: 1.5em;
+    border: 3px dashed var(--border-color, #883ec5);
+    border-radius: 12px;
+  }
+  
+  
 
   /*style header using variables
     applies styling attributes to the <header> tag */
