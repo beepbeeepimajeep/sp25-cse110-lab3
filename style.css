@@ -20,7 +20,7 @@ values can be changed later*/
 /* Highlight section styling using .class selector */
 .highlight {
     background-color: var(--accent-color, #8c6f1f);
-    color: rgb(43, 152, 79);
+    color: rgb(100, 51, 204); /* fallback purple */
     padding: 1.5em;
     border: 3px dashed var(--border-color, #883ec5);
     border-radius: 12px;
@@ -86,6 +86,81 @@ header {
     cursor:auto;
   }
   
+  /* === Grid Layout === */
+#grid-section {
+    margin: 2em 0;
+    padding: 1em;
+    background-color: hsl(180, 50%, 90%); /* HSL color */
+}
+
+.grid-container {
+    /* Grid properties */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1em; /* Grid gap */
+    margin: 1em 0;
+
+    /* Sizing (missing requirement) */
+    min-width: 300px;
+    max-width: 900px;
+    height: 400px;
+
+    /* Positioning (missing requirement) */
+    position: relative; /* Parent for absolute children */
+}
+
+.grid-item {
+    /* Box model (shorthand padding/margin) */
+    padding: 1em;
+    margin: 0.5em;
+    /* color(display-p3 0.55 0.4 0.8) causes validation error */
+    border: 2px solid rgb(100, 51, 204); /* fallback purple */
+
+
+    /* Text styling */
+    font-family: 'Libre Baskerville', serif; /* 3rd party font */
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+    /* color(display-p3 0.55 0.4 0.8) causes validation error */
+    background-color: rgb(230, 210, 180);
+    /* Border radius */
+    border-radius: 10px;
+
+    /* Positioning _*/
+    position: static; /* Default, but explicit */
+}
+
+/* Adjacent sibling combinator_*/
+.grid-item + .grid-item {
+    border-left: 3px dashed #141a17;
+}
+
+/* Child combinator_*/
+.grid-container > .grid-item {
+    font-weight: bold;
+}
+
+/* :has() selector_*/
+.grid-container:has(.grid-item:hover) {
+    outline: 2px solid red;
+}
+
+/* Nested selector_ */
+.grid-container .grid-item:hover {
+        background-color: hsla(40, 83%, 31%, 0.3); /* HSLA + hover */
+        position: sticky; /* Sticky position (missing) */
+        top: 0;
+}
+
+
+/* Media query_*/
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack on small screens */
+        height: auto; /* Flexible height */
+    }
+}
   
   
 
